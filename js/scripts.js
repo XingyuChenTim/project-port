@@ -79,7 +79,7 @@
 
     });
 // Create timeline
-    $('#experience-timeline-2').each(function() {
+    $('#experience-timeline-1').each(function() {
 
         $this = $(this); // Store reference to this
         $userContent = $this.children('div'); // user content
