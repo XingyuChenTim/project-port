@@ -55,7 +55,7 @@
 
     <div id="lead">
         <div id="lead-content">
-            <h1>Shorts on Youth Empowerment Exploratory Data Analysis</h1>
+            <h1>Should the usage of short videos on Social media be restricted?</h1>
             <h2>Xingyu(Tim) Chen</h2>
         </div>
         <!-- End #lead-content -->
@@ -78,30 +78,42 @@
                     <h2 class="heading">Introduction</h2>
                 </div>
                 <div class="col-md-8">
-                    <p>The landscape of social media is ever-changing, especially among teens who often
+                    <p>
+                        The landscape of social media is ever-changing, especially among teens who often
                         are on the leading edge of this space. A new Pwe Research Center survey of American teenagers
                         ages 13 to 17 finds TikTok has rocketed in popularity since its North American debut several
                         years ago and now is a top social media platform for teens among the platforms
-                        covered in this survey. Some 67% of teens say they ever use TikTok.
+                        covered in this survey.
+                    </p>
+                    <p></p>
+                    <p>
                         YouTube tops the 2022 teen online landscape among the platforms covered in the Center’s new
                         survey, as it is used by 95% of teens.
                         TikTok is next on the list of platforms that were asked about in this survey (67%), followed by
                         Instagram and Snapchat,
                         which are both used by about six-in-ten teens. After those platforms come Facebook with 32% and
-                        smaller shares who use Twitter,
-                        Twitch, WhatsApp, Reddit and Tumblr </p>
+                        smaller shares who use Twitter, Twitch, WhatsApp, Reddit and Tumblr.
+                    </p>
                     <p></p>
-                    <p>Those common used social medias have a common trend in recent year is the short videos, or in
-                        other words, 'Shorts', A large body of research has shown that
+                    <p>
+                        Those common used social medias have a common trend in recent year is the short videos, or in
+                        other words, 'Shorts'. A large body of research has shown that
                         short videos are addictive because the app gets to know your preferences, so it delivers videos
                         that match your taste.
                         On the other hand, the shorts can decrease attention span from overabundance of information
                         through just scrolling. In biology field,
-                        shorts can cause dopamine problem through gain lots of joy in certain period of time. Thus, the
-                        main motivation of this project to figure out how people
-                        consider the pros and cons of shorts in these social media and do text mining to get insight
-                        from these resources. </p>
+                        shorts can cause dopamine problem through gain lots of joy in certain period of time.
+                    </p>
                     <p></p>
+                    <p>
+                        Thus, we want to do some analysis on short videos, especially for teenager mental health.
+                        The main motivation of this project to figure out how people
+                        consider the pros and cons of short videos in these social media
+                        and do text mining to get insight from these comments, reviews, and articles.
+                        And try to answer this question: Should we pay attention to the short videos
+                        in these social media and make restriction on the usage?
+                    </p>
+                    <img src="images/pic1.png" alt="pic1">
                 </div>
             </div>
         </div>
@@ -109,10 +121,31 @@
 
 
     <div id="data" class="optional-section background-alt">
-        <h2 class="heading">Data</h2>
-
-        <div class="optional-section-block">
-            <p>here is the data section<p>
+        <div class="row">
+            <div class="col-md-4">
+                <h2 class="heading">Data</h2>
+                <p></p>
+                <a href = "https://github.com/XingyuChenTim/project-port">LINK TO CODE</a>
+                <p></p>
+                <a href = "https://github.com/XingyuChenTim/project-port">LINK TO DATA</a>
+            </div>
+            <div class="col-md-8">
+                <p>
+                    Currently Two APIs have been used to gather data, one is newsapi, another is Google Search API.
+                    Here is the image of raw data:
+                </p>
+                <img src="images/pic2.png" alt="pic1">
+                <img src="images/pic3.png" alt="pic1">
+            <p></p>
+            <p>
+                The PorterStemmer has been used for Stemming and WordNet from NLTK for Lemmatization.
+                Configured CountVectorizer with maximum feature 50 and TfidVectorizor with maximum feature 1000
+                to clean the data. Here is the image of cleaned data:
+            </p>
+                <p></p>
+                <img src="images/pic4.png" alt="pic1">
+                <img src="images/pic5.png" alt="pic1">
+            </div>
         </div>
     </div>
 
