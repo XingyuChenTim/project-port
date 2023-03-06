@@ -180,6 +180,8 @@
         </div>
     </div>
 
+    <div id="includedContent"></div>
+
     <div id="arm" class="optional-section background-alt">
         <h2 class="heading">ARM</h2>
 
@@ -251,6 +253,12 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script src="jquery.js"></script>
+    <script>
+        $(function(){
+            $("#includedContent").load("Dog_Hike_Topics.html");
+        });
+    </script>
 </body>
 
 </html>
