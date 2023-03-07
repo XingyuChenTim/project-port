@@ -206,7 +206,12 @@
                         We can evaluate the algorithm by two ways such as elbow technique and silhouette technique.
                         We saw differences between them above.
                         The silhouette technique gives us more precise score and number of k for k-means algorithm.
-                        However , we can also use elbow technique for quick response and intuition.
+                        However, we can also use elbow technique for quick response and intuition.
+                        each object is assigned to its own cluster and then the algorithm proceeds iteratively,
+                        at each stage joining the two most similar clusters,
+                        continuing until there is just a single cluster.
+                        At each stage distances between clusters are recomputed by the Lance--Williams dissimilarity
+                        update formula according to the particular clustering method being used.
                     </p>
                     <p></p>
                     <img src="images/pic9.png" alt="pic1">

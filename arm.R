@@ -1,3 +1,4 @@
+# Library
 library(viridis)
 library(arules)
 library(TSP)
@@ -15,15 +16,6 @@ library(tm)
 
 ## YOUR working dir goes here...
 setwd("/Users/xingyuchen0810/Downloads/CUB/2023Spring/text_mining/project-port/data/")
-
-
-###################################
-## Example 1: Kumar's good Example
-##
-## Dataset: https://drive.google.com/file/d/1BvU3iXtrwxfjBsRShaDgI-Ldh7Y3XSEn/view?usp=sharing
-## KumarGroceriesAS_Transactions
-##
-###################################################
 
 FoodsKumar <- read.transactions("new_arm_for_r.csv",
                                 rm.duplicates = FALSE, 
