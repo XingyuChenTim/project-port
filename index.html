@@ -168,7 +168,8 @@
                     <p>
                             Clustering is a way to group a set of data points in a way that similar data points
                             are grouped together. Therefore, clustering algorithms look for similarities or dissimilarities
-                            among data points. Clustering is an unsupervised learning method so there is no label associated
+                            among data points so it can be used to discover groups, categories, and/or similarities within a dataset.
+                            Clustering is an unsupervised learning method so there is no label associated
                             with data points. The algorithm tries to find the underlying structure of the data.
                     </p>
                     <p>
@@ -235,6 +236,7 @@
             <div class="col-md-8">
                 <h3>Overview:</h3>
                 <p>
+                    ARM(Association Rule Mining): Unsupervised/discovery: no labels, evaluate transactions for correlations/associations.
 
                 </p>
                 <h3>Data prep:</h3>
@@ -242,8 +244,13 @@
                 <p></p>
                 <h3>Result:</h3>
                 <p>
-                    Include the top 15 rules with thresholds for support, the top 15 for confidence, and the top 15 for lift.
+
                 </p>
+                <ul>
+                    <li> Support: [How often items in A and items in B occur together relative to all transactions.] </li>
+                    <li> Confidence: [How often items in A and items in B occur together – relative to transactions that contain A] </li>
+                    <li> Lift: Lift(A,B) > 1, A and B are positively correlated</li>
+                </ul>
                 <p></p>
                 <img src="images/pic16.png" alt="pic1">
                 <p>
