@@ -12,8 +12,16 @@ library(arulesViz)
 library(dplyr)
 library(methods)
 library(tm)
-
-
+## (1) detach("package:arulesViz", unload=TRUE)
+## (2) detach("package:arules", unload=TRUE)
+## (3) library(arules)
+## (4) library(arulesViz)
+detach(package:tm, unload=TRUE)
+library(tm)
+detach("package:arulesViz", unload=TRUE)
+detach("package:arules", unload=TRUE)
+library(arules)
+library(arulesViz)
 ## YOUR working dir goes here...
 setwd("/Users/xingyuchen0810/Downloads/CUB/2023Spring/text_mining/project-port/data/")
 
