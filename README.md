@@ -74,3 +74,153 @@ DTM: Doc are rows, words are cols. cluster in certain way. DocumentTermMatrix
 TDM: Doc are cols, words are rows. cluster in certain way. TermDocumentMatrix
 
 
+Record data: Record data contains rows and columns(variables, attributes, fields, or features). Record data can be mixed meaning that some variables are qualitative (names, categories, descriptions, etc.), while other variables may be quantitative (numeric). record data can be all numeric or all qualitative. dataframe is record format. Text can be record data
+Label, Gender, Cholesterol, Weight, Height, StressLevel... 
+
+JSON: semi-structured data
+
+Corpus: folder of text files, structure but the text files in the corpus need not be assumed to be structured
+
+Consider/Update Types, Formats, and Model Goals Introduction to “Cleaning”
+Missing Values  
+Incorrect Values   
+Duplications  
+Outliers  
+Formatting for Models Transformation Normalization
+
+Precision = TP/TP+FN Measure of Sensitivity
+Recall = TP/TP+FP Measure of Specificity
+F-measure = 2TP/2TP+FP+TN
+
+Data Structures: 
+Primitive: Integer, Float, String, Boolean
+Non-Primitive: Array, List(Linear: Stacks, Queues; Non-Linear: Graphs, Trees), Tuple, Dictionary, Set, File
+
+Transaction: text as transactions, basket data. you can think of the words in text data as being the variables. We can tokenize text data (break it into tokens – or words) and then we can vectorize (create a dataframe or matrix where the words are the column names and the documents are the rows).
+
+API: is an Application Programming Interface. An API is an interface that allows and enables interaction    
+
+rhs = right hand side
+
+DT: Directional tree, each leaf node is assigned a class label  
+Advantages:  
+◦ Inexpensive to construct  
+◦ Extremely fast at classifying unknown records  
+◦ Easy to interpret for small-sized trees  
+◦ Robust for missing values  
+◦ Redundant attributes do not adversely affect accuracy of prediction  
+◦ Accuracy is comparable to other classification techniques for many simple data sets  
+
+Decision tree issues:  
+    -Choosing Splitting Attributes  
+    -Ordering of Splitting Attributes  
+    -Tree Structure  
+    -Stopping Criteria  
+    -Training Data Pruning  
+
+SVM: Supervised machine learning technique. Kernels, change the margin 
+
+LDA for topic modeling  
+
+Discovering the abstract topics that occur in a collection of documents
+
+Latent which means hidden or unknown Dirichlet Allocation is an example of topic modeling and is used to classify text in a document to a particular topic
+
+It builds a topic per document model and words per topic model, modeled as Dirichlet distributions 
+
+Topic modeling can be used to organized text, indirectly in prediction, better understand documents, search optimization and summarize, discover hidden themes/associations
+
+1)	Each document is a collection or set of words.  
+2)	Each topic is a set or collection of words.  
+
+•	A collection of documents is called a corpus.  
+•	Documents are a collection of words.  
+(Also called a Bag of Words – order does not matter)  
+•	Similar documents contain collections of similar words.    
+•	Words carry semantic information – but not all words!  
+•	Words like: am, is, the, and, a, but, etc. carry no information and should be removed. (These are stopwords).  
+•	To better differentiate between topics and documents, we might remove all words that occur in say 85% or more of the documents (like of or it).  
+•	This could also result in the removal of non-stopwords like “cancer” for example if all of our documents are cancer research and we want to model the topics (other than cancer)  
+A “Latent” topic is a hidden or unknown topic – it exists, but we do not know it yet.  
+LDA assumes that documents in a corpus conform to a specific structure.  
+
+1.	The number of documents is known. (We tell the algorithm)
+2.	All documents are in a corpus (and nothing else is in the corpus folder)
+3.	The number of topics, k, is also known – we choose and tell the algorithm.
+4.	Documents are thought of as probability distributions over topics.
+5.	Topics are thought of as probability distributions over words.
+      
+LDA uses probability distributions and not frequencies.  
+LDA:  
+-A Topic is a Mixture of Words  
+-A Doc is a Mixture of Topics  
+
+LDA Algorithm
+1)	Randomly assign a topic to every word in all documents.
+2)	Randomly assign a topic to each document.
+3)	Optimize
+
+
+
+1. Nearest Neighbour Method – create groups by starting with the smallest distances and build branches
+   In effect we keep asking data matrix “Which plot is my nearest neighbour?” to add branches  
+2. Centroid Method – creates a group based on smallest distance to group centroid rather than group member
+   First creates a group based on small distance then uses the centroid of that group to find which additional points belong in the same group  
+3. Wards Method – creates groups such that variance is minimized within clusters  
+
+
+Consider a document containing 100 words and the word cat appears 3 times.   
+The term frequency (i.e., tf) for cat is then (3 / 100) = 0.03.   
+Now, assume we have 100,000 documents and the word cat appears in 1000 of these.  
+Then, the inverse document frequency (i.e., idf) is calculated as log(100,000 / 1000) = 2.   
+Thus, the Tf-idf weight is the product of these quantities:     .03 *  2 = .06  
+
+Graphs and Networks  
+Simple abstractions, model problems involving relationships. Applications; connections between individuals, groups, organizations, and societies. Networks are mathematical graphs, with vertices(nodes) and edges(links).  
+
+Network == Graph, networks are collections of points joined by lines  
+
+Network types: Undirected (symmetric, reciprocal relationship), Directed(asymmetric, non-reciprocal relationship)  
+
+Node Degree: The number of neighbors an individual node has  
+
+Diameter: max (all shortest paths in the graph)  
+
+Shortest path: least number of edges, never loops or cycles  
+
+Goals of studying networks:  
+-Characterize structure  
+-Understand the behavior  
+-Prediction of behavior and spread/transmission  
+
+Node Betweenness Centrality - BC  
+•	Measure of BC in a graph based on shortest paths.  
+•	BC measures the extent to which a vertex/node lies on paths between other vertices.  
+•	Vertices with high betweenness have greater influence within a network due to their control/affect of information passing between other nodes.  
+•	To disrupt communications in a network, node with greatest BC can be removed.   
+
+Beer and diapers correlation: people who buy diapers will likely buy beer.  
+
+The apriori algorithm Based on frequency of itemsets  
+
+Kmode when gender is not correlated, then it cause the error
+
+Word embedding methods convert words to numbers while also identifying the semantics and syntaxes of the word such as Word2Vec, GloVe, ELMo, FastText: find better ways to represent more information.  
+
+Naïve Bayes is a supervised method that uses labeled data to train a probability-based prediction model. This model can then be used to predict/classify data vectors for which the label is not known.  
+
+STEPS:  
+1) Managing Missing Values  
+2) Managing Incorrect (or incorrectly formatted) Values  
+3) Dealing with duplicates  
+4) Managing outliers  
+
+CountVectorizer in Python: is a scikit-learn (sklearn) package that uses count vectorization to convert a collection of text documents (as csv, txt, corpus, etc) to a DTM (document term matrix) of token (such as word) counts. This DTM can be converted to a pandas dataframe.  
+
+The shortest document contains 50 words and the longest document contains 50,000 words.   
+Can we use CountVectorizer here?  
+Not without normalization  
+
+TF: Term Frequency  
+IDF: Inverse Document Frequency  
+This weight is a statistical measure used to evaluate how important a word is to a document in a collection or corpus. The importance increases proportionally to the number of times a word appears in the document but is offset by the frequency of the word in the corpus.  
