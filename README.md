@@ -73,7 +73,6 @@ DTM: Doc are rows, words are cols. cluster in certain way. DocumentTermMatrix
 
 TDM: Doc are cols, words are rows. cluster in certain way. TermDocumentMatrix
 
-
 Record data: Record data contains rows and columns(variables, attributes, fields, or features). Record data can be mixed meaning that some variables are qualitative (names, categories, descriptions, etc.), while other variables may be quantitative (numeric). record data can be all numeric or all qualitative. dataframe is record format. Text can be record data
 Label, Gender, Cholesterol, Weight, Height, StressLevel... 
 
@@ -101,24 +100,6 @@ Transaction: text as transactions, basket data. you can think of the words in te
 API: is an Application Programming Interface. An API is an interface that allows and enables interaction    
 
 rhs = right hand side
-
-DT: Directional tree, each leaf node is assigned a class label  
-Advantages:  
-◦ Inexpensive to construct  
-◦ Extremely fast at classifying unknown records  
-◦ Easy to interpret for small-sized trees  
-◦ Robust for missing values  
-◦ Redundant attributes do not adversely affect accuracy of prediction  
-◦ Accuracy is comparable to other classification techniques for many simple data sets  
-
-Decision tree issues:  
-    -Choosing Splitting Attributes  
-    -Ordering of Splitting Attributes  
-    -Tree Structure  
-    -Stopping Criteria  
-    -Training Data Pruning  
-
-SVM: Supervised machine learning technique. Kernels, change the margin 
 
 LDA for topic modeling  
 
@@ -206,14 +187,6 @@ The apriori algorithm Based on frequency of itemsets
 Kmode when gender is not correlated, then it cause the error
 
 Word embedding methods convert words to numbers while also identifying the semantics and syntaxes of the word such as Word2Vec, GloVe, ELMo, FastText: find better ways to represent more information.  
-
-Naïve Bayes is a supervised method that uses labeled data to train a probability-based prediction model. This model can then be used to predict/classify data vectors for which the label is not known.  
-
-STEPS:  
-1) Managing Missing Values  
-2) Managing Incorrect (or incorrectly formatted) Values  
-3) Dealing with duplicates  
-4) Managing outliers  
 
 CountVectorizer in Python: is a scikit-learn (sklearn) package that uses count vectorization to convert a collection of text documents (as csv, txt, corpus, etc) to a DTM (document term matrix) of token (such as word) counts. This DTM can be converted to a pandas dataframe.  
 

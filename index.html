@@ -309,12 +309,33 @@
                 <div class="col-md-4">
                     <h2 class="heading">Naive Bayes</h2>
                     <p></p>
-                    <a href = "https://github.com/XingyuChenTim/project-port/blob/master/newsapigather.ipynb">LINK TO CODE</a>
+                    <a href = "https://github.com/XingyuChenTim/project-port/blob/master/dt_nb_svm.ipynb">LINK TO CODE</a>
                     <p></p>
-                    <a href = "https://github.com/XingyuChenTim/project-port/blob/master/NewHeadlines_2_5.csv">LINK TO DATA</a>
+                    <a href = "https://github.com/XingyuChenTim/project-port/blob/master/df_count.csv">LINK TO DATA</a>
                 </div>
                 <div class="col-md-8">
-                    <h3>tbd:</h3>
+                    <h3>Overview:</h3>
+                    <p>
+                        For supervised model approach, each content has been kept length less than 50 words. And to keep the decision tree readable, the max_features have been kept as 50. And the labels have been transfer into categories values. The numerical values from 1 to 5 transform into "very bad", "bad", "average", "good", and "very good".
+                    </p>
+                    <h3>Data Prep:</h3>
+                    <p>
+                    STEPS:  
+                    <p>1) Managing Missing Values    
+                        <p> 2) Managing Incorrect (or incorrectly formatted) Values    
+                            <p>   3) Dealing with duplicates    
+                                <p>    4) Managing outliers     
+                    </p>
+                    <img src="images/pic17.png" alt="pic1">
+                    <p>
+                    </p>
+                    <h3>Result & Conclusion:</h3>
+                    <p>
+                        Naïve Bayes is a supervised method that uses labeled data to train a probability-based prediction model. This model can then be used to predict/classify data vectors for which the label is not known. 
+                    </p>
+                    <img src="images/pic20.png" alt="pic1">
+                    <p>
+                    </p>
                 </div>
             </div>
         </div>
@@ -326,12 +347,33 @@
                 <div class="col-md-4">
                     <h2 class="heading">Decision Tree</h2>
                     <p></p>
-                    <a href = "https://github.com/XingyuChenTim/project-port/blob/master/newsapigather.ipynb">LINK TO CODE</a>
+                    <a href = "https://github.com/XingyuChenTim/project-port/blob/master/dt_nb_svm.ipynb">LINK TO CODE</a>
                     <p></p>
-                    <a href = "https://github.com/XingyuChenTim/project-port/blob/master/NewHeadlines_2_5.csv">LINK TO DATA</a>
+                    <a href = "https://github.com/XingyuChenTim/project-port/blob/master/df_count.csv">LINK TO DATA</a>
                 </div>
                 <div class="col-md-8">
-                    <h3>tbd:</h3>
+                    <h3>Overview:</h3>
+                    <p> Directional tree, each leaf node is assigned a class label. It is easier to construct compared to other supervised models and easy to interpret for small-sized trees structure.</p>
+                    <p>Robust for missing values but have training data pruning for overfitting issue. And also hard to define stopping criteria and chooseing and ordering of splitting attributes</p>
+                    <h3>Data Prep:</h3>
+                    <p>
+                        There are 354,159 samples in the dataset. However the data is not evenly distributed, which make model has biase on certain categories. The top frequency categories values is "very good" and the less frequency categories values is "bad". Thus downsampling each categories to 5000 so make each sample from categories value evenly. 
+                        We have 5 categories values thus we totaly have 25,000 rows of samples. 
+                    </p>
+                    <img src="images/pic18.png" alt="pic1">
+                    </p>
+                    </p>
+                    <h3>Result & Conclusion:</h3>
+                </p>
+                <img src="images/pic22.png" alt="pic1">
+                <p>
+                                        </p>
+                <img src="images/pic23.png" alt="pic1">
+                <p>
+                                        </p>
+                <img src="images/pic24.png" alt="pic1">
+                <p>
+                    <img src="images/pic21.png" alt="pic1">
                 </div>
             </div>
         </div>
@@ -343,12 +385,30 @@
                 <div class="col-md-4">
                     <h2 class="heading">SVM</h2>
                     <p></p>
-                    <a href = "https://github.com/XingyuChenTim/project-port/blob/master/newsapigather.ipynb">LINK TO CODE</a>
+                    <a href = "https://github.com/XingyuChenTim/project-port/blob/master/dt_nb_svm.ipynb">LINK TO CODE</a>
                     <p></p>
-                    <a href = "https://github.com/XingyuChenTim/project-port/blob/master/NewHeadlines_2_5.csv">LINK TO DATA</a>
+                    <a href = "https://github.com/XingyuChenTim/project-port/blob/master/df_count.csv">LINK TO DATA</a>
                 </div>
                 <div class="col-md-8">
-                    <h3>tbd:</h3>
+                    <h3>Overview:</h3>
+                    <p> Supervised machine learning technique. Different Kernels to change the margin 
+                    <h3>Data Prep:</h3>
+                    <p>
+
+                        After downsampling, we have 25,000 rows before we split into training and testing dataset, the ratio is 20% verse 80%.  
+                    </p>
+                    
+                    <img src="images/pic19.png" alt="pic1">
+                    <p>
+                        <h3>Result & Conclusion:</h3>
+                                            <img src="images/pic25.png" alt="pic1">
+                    <p>
+                                            </p>
+                    <img src="images/pic26.png" alt="pic1">
+                    <p>
+                                            </p>
+                    <img src="images/pic27.png" alt="pic1">
+                    <p>
                 </div>
             </div>
         </div>
