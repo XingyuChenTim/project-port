@@ -80,13 +80,6 @@ JSON: semi-structured data
 
 Corpus: folder of text files, structure but the text files in the corpus need not be assumed to be structured
 
-Consider/Update Types, Formats, and Model Goals Introduction to “Cleaning”
-Missing Values  
-Incorrect Values   
-Duplications  
-Outliers  
-Formatting for Models Transformation Normalization
-
 Precision = TP/TP+FN Measure of Sensitivity
 Recall = TP/TP+FP Measure of Specificity
 F-measure = 2TP/2TP+FP+TN
@@ -140,8 +133,6 @@ LDA Algorithm
 1)	Randomly assign a topic to every word in all documents.
 2)	Randomly assign a topic to each document.
 3)	Optimize
-
-
 
 1. Nearest Neighbour Method – create groups by starting with the smallest distances and build branches
    In effect we keep asking data matrix “Which plot is my nearest neighbour?” to add branches  
