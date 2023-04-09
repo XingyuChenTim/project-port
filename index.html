@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
+    <title>Text Mining Project</title>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
@@ -322,20 +322,22 @@
                     <p>
                     STEPS:  
                     <p>1) Managing Missing Values    
-                        <p> 2) Managing Incorrect (or incorrectly formatted) Values    
-                            <p>   3) Dealing with duplicates    
-                                <p>    4) Managing outliers     
+                    <p>2) Managing Incorrect (or incorrectly formatted) Values    
+                    <p>3) Dealing with duplicates    
+                    <p>4) Managing outliers     
                     </p>
-                    <img src="images/pic17.png" alt="pic1">
+                    <img src="images/pic17.png" alt="pic1", width="600px">
                     <p>
                     </p>
                     <h3>Result & Conclusion:</h3>
                     <p>
                         Naïve Bayes is a supervised method that uses labeled data to train a probability-based prediction model. This model can then be used to predict/classify data vectors for which the label is not known. 
-                    </p>
+                        <p>    The Naive Bayes algorithm is based on Bayes' theorem, which states that the probability of a hypothesis given the observed evidence is proportional to the probability of the evidence given the hypothesis, multiplied by the prior probability of the hypothesis. In text classification, the hypothesis is the class label (e.g., positive or negative sentiment) and the evidence is the words in the text.
+                            <p>   Naive Bayes is called "naive" because it makes the assumption that the presence or absence of a word in a document is independent of the presence or absence of any other word in the document, which is often not true in practice. Despite this assumption, Naive Bayes often performs well in text classification tasks and is computationally efficient, making it a popular choice for many applications.
+                    <p> From the confusion matrix below, the Naive Bayes perform relatively well for each categories. </p>
+                            </p>
                     <img src="images/pic20.png" alt="pic1">
-                    <p>
-                    </p>
+                    <p></p>
                 </div>
             </div>
         </div>
@@ -353,25 +355,26 @@
                 </div>
                 <div class="col-md-8">
                     <h3>Overview:</h3>
-                    <p> Directional tree, each leaf node is assigned a class label. It is easier to construct compared to other supervised models and easy to interpret for small-sized trees structure.</p>
+                    <p> In other words, directional tree: each leaf node is assigned a class label. It is easier to construct compared to other supervised models and easy to interpret for small-sized trees structure.</p>
                     <p>Robust for missing values but have training data pruning for overfitting issue. And also hard to define stopping criteria and chooseing and ordering of splitting attributes</p>
+                    <p>A decision tree is a type of supervised learning algorithm that recursively partitions the data into subsets based on the values of one or more features, with the goal of maximizing the purity or homogeneity of each subset with respect to the target variable.</p>
                     <h3>Data Prep:</h3>
                     <p>
                         There are 354,159 samples in the dataset. However the data is not evenly distributed, which make model has biase on certain categories. The top frequency categories values is "very good" and the less frequency categories values is "bad". Thus downsampling each categories to 5000 so make each sample from categories value evenly. 
                         We have 5 categories values thus we totaly have 25,000 rows of samples. 
                     </p>
-                    <img src="images/pic18.png" alt="pic1">
+                    <img src="images/pic18.png" alt="pic1", width="800px">
                     </p>
                     </p>
                     <h3>Result & Conclusion:</h3>
-                    <p>
-                    </p>
+                    <p>Decision trees can be prone to overfitting, particularly when the tree is deep and complex. This can lead to poor generalization performance on new data. Thus, the maximum leaft nodes set to 5 in order to interpret and visualize, which can help in understanding the factors that are driving the predictions </p>
+                    <p> Decision Tree 1: entropy criterion + best splitter. </p>
                 <img src="images/pic22.png" alt="pic1">
-                <p> </p>
+                <p> Decision Tree 2: entropy criterion + random splitter </p>
                 <img src="images/pic23.png" alt="pic1">
-                <p></p>
+                <p>Decision Tree 3: gini criterion + best splitter </p>
                 <img src="images/pic24.png" alt="pic1">
-                <p></p>
+                <p>Due to limited leaf set up, all the three decison perform bad on predictions. However, we can find top 5 key features for spliting the decision trees. Top 4 features for split trees: good, love, great, nice</p>
                 <img src="images/pic21.png" alt="pic1">
                 </div>
             </div>
@@ -390,22 +393,28 @@
                 </div>
                 <div class="col-md-8">
                     <h3>Overview:</h3>
-                    <p> Supervised machine learning technique. Different Kernels to change the margin 
+                    <p> SVM is a type of supervised learning algorithm that seeks to find the hyperplane that best separates the data points of different classes in a high-dimensional space, using different Kernels to change the margin. 
+                    <p>In the context of text classification, SVM can be used to classify documents into different categories based on the presence or absence of certain words or phrases in the text. 
+                    <p>The SVM algorithm tries to find the hyperplane that maximizes the margin between the data points of different classes. The margin is the distance between the hyperplane and the closest data points of each class. SVM tries to minimize the misclassification error while maximizing the margin.</p>
+                    <p>SVM has several advantages in text mining and NLP applications. It can handle both linearly and non-linearly separable data and can work well even in high-dimensional spaces. SVM is also robust to overfitting and can generalize well to new data.</p> 
                     <h3>Data Prep:</h3>
                     <p>
-
                         After downsampling, we have 25,000 rows before we split into training and testing dataset, the ratio is 20% verse 80%.  
                     </p>
-                    
                     <img src="images/pic19.png" alt="pic1">
                     <p>
                     <h3>Result & Conclusion:</h3>
+                    <p>One disadvantage of SVM is that it can be computationally expensive and time-consuming to train on large datasets with a large number of features. 
+                        <p>Another disadvantage is that the choice of the kernel function used in SVM can have a significant impact on the performance of the model, and selecting the right kernel function for a given dataset can be challenging.</p>
+                    <p> There are three kernels been used for SVM model: LinearSVC, RBF, and POLY. The POLY perfom better compared to Linear and RBF kernel. 
+                        <p>LinearSVC</p>
                     <img src="images/pic25.png" alt="pic1">
-                    <p></p>
+                    <p>RBF</p>
                     <img src="images/pic26.png" alt="pic1">
-                    <p></p>
+                    <p>POLY</p>
                     <img src="images/pic27.png" alt="pic1">
-                    <p></p>
+                    <p>SVM is perform relately well compared to Decision Tree and Naive Bayes with similary time and memory consumption. SVM can be used in combination with other techniques such as feature selection and ensemble methods to improve its performance on text classification tasks.</p>
+                    <p>However, SVM is hard to interpret because it is "blackbox" model and it is hard to know which features has been significant contribute to the prediction or categories result.</p>
                 </div>
             </div>
         </div>
