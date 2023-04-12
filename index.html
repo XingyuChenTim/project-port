@@ -62,7 +62,7 @@
 
     <div id="lead">
         <div id="lead-content">
-            <h1>Should the usage of short videos on Social media be restricted?</h1>
+            <h1>TikTok Sentiment Analysis: App Store Reviews, Tweets, and ChatGPT</h1>
             <h2>Xingyu(Tim) Chen</h2>
         </div>
         <!-- End #lead-content -->
@@ -432,27 +432,37 @@
                 <div class="col-md-4">
                     <h2 class="heading">Neural Nets</h2>
                     <p></p>
-                    <a href = "https://github.com/XingyuChenTim/project-port/blob/master/newsapigather.ipynb">LINK TO CODE</a>
+                    <a href = "https://github.com/XingyuChenTim/project-port/blob/master/nn_project.ipynb">LINK TO CODE</a>
                     <p></p>
-                    <a href = "https://github.com/XingyuChenTim/project-port/blob/master/NewHeadlines_2_5.csv">LINK TO DATA</a>
+                    <a href = "https://github.com/XingyuChenTim/project-port/blob/master/df_nn.csv">LINK TO DATA</a>
                 </div>
                 <div class="col-md-8">
                     <h3>Overview:</h3>
                     <p>
-                        TBD
+                        Neural networks are a powerful tool for text mining tasks such as text classification, sentiment analysis, and language modeling. They have been widely used in natural language processing (NLP) due to their ability to learn complex patterns and relationships in large amounts of text data.
                     </p>
+                    <p>There are three typical neural networks been used in this section: LSTM (RNN), CNN, and BERT (Transformer)</p>
                     <h3>Data prep:</h3>
                     <p>
+                        Due to complex of neural nets, the sample dataset only contain two labeled, negative for '0' and positive for '1'. Max_features has been set up as 62.  
                     </p>
-                    <img src="images/pic30.png" alt="pic1">
+                    <img src="images/pic30.png" alt="pic1", width="800px">
                     <p></p>
-                    <h3>Result:</h3>
+                    <h3>Result & Conclusion:</h3>
                     <p>  LSTM (RNN)</p>
+                    <p>Recurrent neural networks (RNNs) are designed to handle sequential data, such as text, by maintaining a memory of previous inputs. RNNs have been shown to be particularly effective at modeling long-term dependencies in the input text, making them well-suited for tasks that involve longer text sequences, such as language modeling or text generation. However, they can be prone to the vanishing gradient problem, which can make it difficult for the RNN to learn long-term dependencies.
+                        <p>    To address this problem, long short-term memory (LSTM) have been proposed, which use gating mechanisms to selectively update the hidden state and prevent the vanishing gradient problem. During training, the LSTM network learns to update its hidden state based on the input word embeddings and the previous hidden state. The output of the last LSTM cell is then fed into a fully connected layer, which performs the final classification or prediction</p>
                     <img src="images/pic28.png" alt="pic1">
                     <p>  CNN </p>
+                    <p>Convolutional neural networks (CNNs) using word embeddings as input, which is a sequence of words. In a convolutional layer, the CNN applies a set of filters to the input sequence, with each filter sliding over the sequence to detect patterns at different positions. The output of the convolutional layer is a set of feature maps, where each feature map represents the activation of a particular filter across the input sequence. </p>
                     <img src="images/pic29.png" alt="pic1">
+                    <p>  BERT (Transformer) </p>
+                    <p> DistilBERT is a distilled and smaller version of the BERT (Bidirectional Encoder Representations from Transformers) model that has been designed to be faster and more memory-efficient while still maintaining high performance on various natural language processing (NLP) tasks, including text mining.</p>
+                    <p> Like BERT, DistilBERT is a transformer-based neural network architecture that uses self-attention mechanisms to capture the semantic and syntactic relationships between words in a sentence. However, DistilBERT achieves this with fewer layers and fewer parameters, resulting in a smaller model that can be trained and used more efficiently.</p>
+                    <img src="images/pic31.png" alt="pic1">
+                    <img src="images/pic32.png" alt="pic1">
                     <p>
-                    <p></p>
+                    <p>We can see that the BERT perform better than CNN and LSTM(RNN) but spending more time. BERT has 86% accuracy meanwhile LSTM has 72% and CNN has 78%. </p>
                 </div>
             </div>
         </div>
