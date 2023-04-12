@@ -4,3 +4,4 @@ node_modules/
 **/.idea
 **/.Rhistory
 twitterAPI
+dbert_model.h5
