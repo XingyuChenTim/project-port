@@ -23,7 +23,7 @@ detach("package:arules", unload=TRUE)
 library(arules)
 library(arulesViz)
 ## YOUR working dir goes here...
-setwd("/Users/xingyuchen0810/Downloads/CUB/2023Spring/text_mining/project-port/data/")
+setwd("/Users/xingyuchen0810/Downloads/text_mining/project-port/")
 
 FoodsKumar <- read.transactions("new_arm_for_r.csv",
                                 rm.duplicates = FALSE, 
@@ -56,21 +56,21 @@ inspect(Sortedlift[1:15])
 
 ## Selecting or targeting specific rules  RHS
 appRules <- apriori(data=FoodsKumar,parameter = list(supp=.001, conf=.01, minlen=2),
-                     appearance = list(default="lhs", rhs="app"),
+                     appearance = list(default="lhs", rhs="ban"),
                      control=list(verbose=FALSE))
 appRules <- sort(appRules, decreasing=TRUE, by="confidence")
 inspect(appRules[1:4])
 
 ## Selecting or targeting specific rules  RHS
 goodRules <- apriori(data=FoodsKumar,parameter = list(supp=.001, conf=.01, minlen=2),
-                     appearance = list(default="lhs", rhs="good"),
+                     appearance = list(default="lhs", rhs="ban"),
                      control=list(verbose=FALSE))
 goodRules <- sort(goodRules, decreasing=TRUE, by="confidence")
 inspect(goodRules[1:4])
 
 ## Selecting rules with LHS specified
 niceRules <- apriori(data=FoodsKumar,parameter = list(supp=.001, conf=.01, minlen=2),
-                      appearance = list(default="rhs", lhs="nice"),
+                      appearance = list(default="rhs", lhs="ban"),
                       control=list(verbose=FALSE))
 niceRules <- sort(niceRules, decreasing=TRUE, by="support")
 inspect(niceRules[1:4])

@@ -17,7 +17,9 @@ library(stringr)
 library(wordcloud)
 library(tm) ## to read in corpus (text data)
 
-Record_3D_DF<-read.csv("/Users/xingyuchen0810/Downloads/CUB/2023Spring/text_mining/project-port/data/new_cluster_for_r.csv")
+# Record_3D_DF<-read.csv("/Users/xingyuchen0810/Downloads/CUB/2023Spring/text_mining/project-port/data/new_cluster_for_r.csv")
+Record_3D_DF<-read.csv("/Users/xingyuchen0810/Downloads/text_mining/project-port/new_cluster_for_r.csv")
+
 ## Look, clean, prep
 head(Record_3D_DF)
 str(Record_3D_DF)
