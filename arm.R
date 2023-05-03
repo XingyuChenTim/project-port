@@ -23,7 +23,7 @@ detach("package:arules", unload=TRUE)
 library(arules)
 library(arulesViz)
 ## YOUR working dir goes here...
-setwd("/Users/xingyuchen0810/Downloads/text_mining/project-port/")
+setwd("/Users/xingyuchen0810/Documents/text_mining/project-port")
 
 FoodsKumar <- read.transactions("new_arm_for_r.csv",
                                 rm.duplicates = FALSE, 
@@ -33,7 +33,7 @@ FoodsKumar <- read.transactions("new_arm_for_r.csv",
 inspect(FoodsKumar)
 
 ##### Use apriori to get the RULES
-FrulesK = arules::apriori(FoodsKumar, parameter = list(support=.01, 
+FrulesK = arules::apriori(FoodsKumar, parameter = list(support=.03, 
                                                        confidence=.1, minlen=2))
 inspect(FrulesK)
 
@@ -78,7 +78,6 @@ inspect(niceRules[1:4])
 ## Visualize
 ## tcltk
 
-subrulesK <- head(sort(SortedRulesK, by="lift"),10)
-plot(subrulesK)
+subrulesK <- head(sort(FrulesK, by="lift"),50)
 
 plot(subrulesK, method="graph", engine="interactive")
